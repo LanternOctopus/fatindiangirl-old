@@ -1,0 +1,25 @@
+{
+    "name": "FatIndianGirl Jekyll",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "rebornix.Ruby"
+            ]
+        }
+    },
+    "containerEnv": {
+        "BUNDLE_PATH": "/workspace/vendor/bundle"
+    },
+    "forwardPorts": [8333],
+    "postCreateCommand": "bundle install",
+    "postStartCommand": "bundle exec jekyll serve --host 0.0.0.0 --port 8333 &",
+    "remoteUser": "vscode"
+}

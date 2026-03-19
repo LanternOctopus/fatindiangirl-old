@@ -1,0 +1,42 @@
+title: fatindiangirl
+tagline: eating out in thiruvananthapuram. unapologetically.
+description: "A food and life blog by an American-Indian woman eating her way through TVM."
+url: "https://fatindiangirl.com"
+baseurl: ""
+
+lang: en-US
+image: "/images/og-image.png"
+
+author:
+  name: "Deepti"
+
+theme: jekyll-theme-chirpy
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:categories/:title/
+
+host: 0.0.0.0
+port: 8333
+
+paginate: 10
+paginate_path: /page:num/

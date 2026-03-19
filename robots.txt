@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fatindiangirl.com/sitemap.xml
+Host: fatindiangirl.com
